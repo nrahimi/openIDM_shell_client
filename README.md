@@ -1,7 +1,10 @@
-openIDM Shell Client
+OpenIDM Shell Client
 ====================
 
 Basic set of Bash wrapper scripts that use curl, jq and others to access the openIDM RESTful interface.
+<br/>
+Edit the settings.json file with server and port values for OpenIDM instance.
+<br/>
 <br/>
 <b>geturl</b> - perform HTTP GET request. Takes URL as argument
 <br/>
@@ -17,3 +20,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getusers</b> - returns json containing all managed user ids; No arguments
 <br/>
 <b>getreconjons</b> - returns json containing all completed reconcilation jobs; No arguments
+<br/>
+<b>runrecon</b> - runs a specific reconciliation job.  Takes sync name as argument
