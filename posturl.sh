@@ -1,6 +1,6 @@
 #!/bin/bash
-#Simon Moffatt
-#15mar2013
+#OpenIDM Shell Client
+#https://github.com/smof/openIDM_shell_client
 #Wrapper for quickly calling curl to perform a POST against openIDM
 
 #check that URL is passed as an argument
@@ -23,6 +23,9 @@ if [ "$CURL_LOC" = "" ]; then
 	exit
 fi
 
+#suck in username and password details
+USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
+PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
 #run parses JSON response to for pretty reading
-curl --request POST --header "X-OpenIDM-Username: openidm-admin" --header "X-OpenIDM-Password: openidm-admin" $1 | jq .
+curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" $1 | jq .
