@@ -6,3 +6,14 @@ Basic set of Bash wrapper scripts that use curl, jq and others to access the ope
 <b>geturl</b> - perform HTTP GET request. Takes URL as argument
 <br/>
 <b>puturl</b> - perform HTTP PUT request. Takes URL as argument 1; JSON payload as argument 2
+<br/>
+<b>posturl</b> - perform GTTP POST request. Takes URL as argument 1
+<br/>
+<br/>
+Individual wrappers for specific functions that use the above generic wrappers:
+<br/>
+<b>getuser</b> - returns a single managed user json object; Takes id as argument 1
+<br/>
+<b>getusers</b> - returns json containing all managed user ids; No arguments
+<br/>
+<b>getreconjons</b> - returns json containing all completed reconcilation jobs; No arguments
