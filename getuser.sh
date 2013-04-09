@@ -3,6 +3,9 @@
 #https://github.com/smof/openIDM_shell_client
 #Returns a single user as given via argument id
 
+OPENIDM_SERVER=localhost
+OPENIDM_SERVER_PORT=8080
+
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires argument id"
@@ -10,4 +13,4 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-./geturl.sh http://localhost:8080/openidm/managed/user/$1
+./geturl.sh http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1
