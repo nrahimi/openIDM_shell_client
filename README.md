@@ -24,3 +24,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>runrecon</b> - runs a specific reconciliation job.  Takes sync name as argument 1
 <br/>
 <b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
+<br/>
+<b>getconfig</b> - returns json of global configuration.  No arguments
