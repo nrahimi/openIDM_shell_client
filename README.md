@@ -21,4 +21,6 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>getreconjons</b> - returns json containing all completed reconcilation jobs; No arguments
 <br/>
-<b>runrecon</b> - runs a specific reconciliation job.  Takes sync name as argument
+<b>runrecon</b> - runs a specific reconciliation job.  Takes sync name as argument 1
+<br/>
+<b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
