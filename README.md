@@ -33,3 +33,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getconnectorconfig</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
 <br/>
 <b>getpolicies</b> - returns all policy details.  No arguments
+<br/>
+<b>triggertask</b> - triggers an existing task object.  Takes task name as argument 1
