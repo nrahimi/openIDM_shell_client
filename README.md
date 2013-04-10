@@ -27,4 +27,6 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>getconfig</b> - returns json of global configuration.  No arguments
 <br/>
-<b>getstatus</b> - returns status of OpenIDM instance
+<b>getstatus</b> - returns status of OpenIDM instance. No arguments
+<br/>
+<b>getconnectorconfig</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
