@@ -26,3 +26,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
 <br/>
 <b>getconfig</b> - returns json of global configuration.  No arguments
+<br/>
+<b>getstatus</b> - returns status of OpenIDM instance
