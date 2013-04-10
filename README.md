@@ -38,4 +38,4 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>canceltask</b> - cancels an existing running task.  Takes task id as argument 1
 <br/>
-<b>gettasks</br> - lists all existing tasks.  No arguments
+<b>gettasks</b> - lists all existing tasks.  No arguments
