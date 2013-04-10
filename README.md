@@ -15,6 +15,7 @@ Edit the settings.json file with server and port values for OpenIDM instance.
 <br/>
 Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
+<br/>
 <b>getuser</b> - returns a single managed user json object; Takes id as argument 1
 <br/>
 <b>getusers</b> - returns json containing all managed user ids; No arguments
@@ -30,3 +31,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getstatus</b> - returns status of OpenIDM instance. No arguments
 <br/>
 <b>getconnectorconfig</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
+<br/>
+<b>getpolicies</b> - returns all policy details.  No arguments
