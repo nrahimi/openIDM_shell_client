@@ -35,3 +35,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getpolicies</b> - returns all policy details.  No arguments
 <br/>
 <b>triggertask</b> - triggers an existing task object.  Takes task name as argument 1
+<br/>
+<b>canceltask</b> - cancels an existing running task.  Takes task id as argument 1
