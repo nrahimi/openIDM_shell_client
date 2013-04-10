@@ -10,6 +10,13 @@ if [ "$JQ_LOC" = "" ]; then
    	exit
 fi
 
+#check that arg is passed
+if [ "$1" = "" ]; then
+	echo "Argument missing.  Requires connector instance name"
+	echo "Eg. ./getconnectorconfig.sh scriptedsql"
+	exit
+fi
+
 OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
 OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
