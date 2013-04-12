@@ -57,4 +57,4 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>WORKFLOW</b>
 <br/>
-<b>getworkflowtask</b> - lists all current workflow tasks.  No arguments
+<b>getworkflowtasks</b> - lists all current workflow tasks.  No arguments
