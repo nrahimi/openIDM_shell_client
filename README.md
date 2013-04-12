@@ -17,9 +17,11 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <br/>
 <b>MANAGED USERS</b>
+<br/>
 <b>getuser</b> - returns a single managed user json object; Takes id as argument 1
 <br/>
 <b>getusers</b> - returns json containing all managed user ids; No arguments
+<br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
@@ -54,4 +56,5 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <br/>
 <b>WORKFLOW</b>
+<br/>
 <b>getworkflowtask</b> - lists all current workflow tasks.  No arguments
