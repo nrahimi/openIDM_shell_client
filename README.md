@@ -16,7 +16,7 @@ Edit the settings.json file with server and port values for OpenIDM instance.
 Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <br/>
-<b>MANAGED USERS<b>
+<b>MANAGED USERS</b>
 <b>getuser</b> - returns a single managed user json object; Takes id as argument 1
 <br/>
 <b>getusers</b> - returns json containing all managed user ids; No arguments
