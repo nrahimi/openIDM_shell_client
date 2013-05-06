@@ -60,3 +60,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getworkflowtasks</b> - lists all current workflow tasks.  No arguments
 <br/>
 <b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
+<br/>
+<br/>
+Use as-is, no warranty implied.  Leave this readme and any attribution in place.
+Simon Moffatt, 2013
