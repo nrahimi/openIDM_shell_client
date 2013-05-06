@@ -10,8 +10,12 @@ if [ "$JQ_LOC" = "" ]; then
    	exit
 fi
 
-OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
-OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
+#check if curl is installed
+CURL_LOC="$(which curl)"
+if [ "$CURL_LOC" = "" ]; then
+	echo "Curl not found.  Please install sudo apt-get install curl etc..."
+	exit
+fi
 
 #check that arg is passed
 if [ "$1" = "" ]; then
@@ -20,6 +24,15 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-./posturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/recon?_action=recon&mapping=$1"
+#suck in username and password details
+OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
+OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
+USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
+PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
+#construct URL
+URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/recon?_action=recon&mapping=$1"
+
+#run parses JSON response to for pretty reading
+curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" $URL | jq .
 
