@@ -42,6 +42,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>getpolicies</b> - returns all policy details.  No arguments
 <br/>
+<b>getsync</b> - returns sync.json config object.  No arguments
+<br/>
 <br/>
 <b>CONNECTORS</b>
 <br/>
