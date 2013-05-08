@@ -22,6 +22,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>getusers</b> - returns json containing all managed user ids; No arguments
 <br/>
+<b>createuser</b> - creates a single user.  Takes id as argument 1; json payload as argument 2
+<br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
