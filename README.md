@@ -24,6 +24,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>createuser</b> - creates a single user.  Takes id as argument 1; json payload as argument 2
 <br/>
+<b>deleteuser</b> - deletes a single user.  Takes id as argument 1.
+<br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
