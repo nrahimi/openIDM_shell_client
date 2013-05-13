@@ -10,7 +10,9 @@ Edit the settings.json file with server and port values for OpenIDM instance.
 <br/>
 <b>puturl</b> - perform HTTP PUT request. Takes URL as argument 1; JSON payload as argument 2
 <br/>
-<b>posturl</b> - perform GTTP POST request. Takes URL as argument 1
+<b>posturl</b> - perform HTTP POST request. Takes URL as argument 1
+<br/>
+<b>deleteurl</b> - perform HTTP DELETE request.  Takes URL as argument 1.
 <br/>
 <br/>
 Individual wrappers for specific functions that use the above generic wrappers:
