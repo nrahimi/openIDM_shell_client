@@ -52,6 +52,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>pingidm</b> - basic system alive check.  No arguments
 <br/>
+<br/>
 <b>CONNECTORS</b>
 <br/>
 <b>getconnectorconfig</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
