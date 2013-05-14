@@ -50,6 +50,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>getsync</b> - returns sync.json config object.  No arguments
 <br/>
+<b>pingidm</b> - basic system alive check.  No arguments
 <br/>
 <b>CONNECTORS</b>
 <br/>
