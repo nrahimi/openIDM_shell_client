@@ -74,5 +74,9 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
 <br/>
 <br/>
+<b>Requirements</b>
+The scripts were tested with jq v1.2 and curl v7.22.0.
+<br/>
+<br/>
 Use as-is, no warranty implied.  Leave this readme and any attribution in place.
 Simon Moffatt, 2013
