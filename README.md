@@ -39,6 +39,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
 <br/>
+<b>createsync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1.
+<br/>
 <br/>
 <b>GENERAL</b>
 <br/>
