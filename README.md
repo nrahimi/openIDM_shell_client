@@ -12,7 +12,7 @@ Edit the settings.json file with server and port values for OpenIDM instance.
 <br/>
 <b>posturl</b> - perform HTTP POST request. Takes URL as argument 1
 <br/>
-<b>deleteurl</b> - perform HTTP DELETE request.  Takes URL as argument 1.
+<b>deleteurl</b> - perform HTTP DELETE request.  Takes URL as argument 1
 <br/>
 <br/>
 Individual wrappers for specific functions that use the above generic wrappers:
@@ -26,9 +26,9 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>createuser</b> - creates a single user.  Takes id as argument 1; json payload as argument 2
 <br/>
-<b>deleteuser</b> - deletes a single user.  Takes id as argument 1.
+<b>deleteuser</b> - deletes a single user.  Takes id as argument 1
 <br/>
-<b>updateuser</b> - updates a user with array of new key values.  Taked id as argument 1.  Takes json payload as argument 2.
+<b>updateuser</b> - updates a user with array of new key values.  Taked id as argument 1.  Takes json payload as argument 2
 <br/>
 <br/>
 <b>RECONCILIATION</b>
@@ -39,7 +39,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
 <br/>
-<b>createsync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1.
+<b>createsync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1
 <br/>
 <br/>
 <b>GENERAL</b>
@@ -67,6 +67,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>canceltask</b> - cancels an existing running task.  Takes task id as argument 1
 <br/>
 <b>gettasks</b> - lists all existing tasks.  No arguments
+<br/>
+<b>gettask</b> - returns specific task instance.  Takes task id as argument 1
 <br/>
 <br/>
 <b>WORKFLOW</b>
