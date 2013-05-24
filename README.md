@@ -1,7 +1,7 @@
 OpenIDM Shell Client
 ====================
 
-Basic set of Bash wrapper scripts that use curl, jq and others to access the openIDM RESTful interface.
+Basic set of Bash wrapper scripts that use curl, jq and others to access the openIDM (http://forgerock.com/openidm) RESTful interface.
 <br/>
 Edit the settings.json file with server and port values for OpenIDM instance.
 <br/>
@@ -82,5 +82,6 @@ Individual wrappers for specific functions that use the above generic wrappers:
 The scripts were tested with jq v1.2 and curl v7.22.0.
 <br/>
 <br/>
-Use as-is, no warranty implied.  Leave this readme and any attribution in place.
-Simon Moffatt, 2013
+Use as-is, no warranty implied.  Leave this readme and any attribution in place. Simon Moffatt, 2013
+<br/>
+<br/>Note these are my tools and in no way officially supported by Forgerock.  They are publicly available a community contribution.
