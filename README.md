@@ -84,4 +84,4 @@ The scripts were tested with jq v1.2 and curl v7.22.0.
 <br/>
 Use as-is, no warranty implied.  Leave this readme and any attribution in place. Simon Moffatt, 2013
 <br/>
-<br/>Note these are my tools and in no way officially supported by Forgerock.  They are publicly available a community contribution.
+<br/>Note these are my tools and in no way officially supported by Forgerock.  They are publicly available as a community contribution.
