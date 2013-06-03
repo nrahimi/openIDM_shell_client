@@ -78,6 +78,15 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
 <br/>
 <br/>
+<b>AUDIT</b>
+<br/>
+<b>get_recon_audit_log</b> - returns entire audit log for given recon id.  Takes recon id as argument 1
+<br/>
+<b>get_recon_audit_log_ABSENT</b> - returns records with situation ABSENT in recon log.  Takes recon id as argument 1
+<br/>
+<b>get_recon_audit_log_UNASSIGNED</b> - returns records with situation UNASSIGNED in recon log.  Takes recon id as argument 1
+<br/>
+<br/>
 <b>Requirements</b>
 The scripts were tested with jq v1.2 and curl v7.22.0.
 <br/>
