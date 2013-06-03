@@ -86,6 +86,10 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_recon_audit_log_UNASSIGNED</b> - returns records with situation UNASSIGNED in recon log.  Takes recon id as argument 1
 <br/>
+<b>get_recon_audit_log_SOURCE_MISSING</b> - returns records with situation SOURCE_MISSING in recon log.  Takes recon id as argument 1
+<br/>
+<b>get_recon_audit_log_entry</b> - returns single log entry.  Takes log entry id as argument 1
+<br/>
 <b>get_activity_log</b> - returns entire activity log.  No arguments
 <br/>
 <b>get_activity_log_entry</b> - returns single activity log entry.  Takes activity id as argument 1
