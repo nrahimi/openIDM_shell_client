@@ -28,7 +28,9 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>deleteuser</b> - deletes a single user.  Takes id as argument 1
 <br/>
-<b>updateuser</b> - updates a user with array of new key values.  Taked id as argument 1.  Takes json payload as argument 2
+<b>updateuser</b> - updates a user with array of new key values.  Takes id as argument 1.  Takes json payload as argument 2
+<br/>
+<b/>get_users_key_value_query</b> - returns users what match to the specific key value query.  Takes field as arg 1, value as arg 2
 <br/>
 <br/>
 <b>RECONCILIATION</b>
