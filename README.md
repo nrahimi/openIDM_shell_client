@@ -90,6 +90,10 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_activity_log_entry</b> - returns single activity log entry.  Takes activity id as argument 1
 <br/>
+<b>get_access_log</b> - returns entire access log.  No arguments
+<br/>
+<b>get_access_log_entry</b> - returns single access log entry.  Takes access id as argument 1
+<br/>
 <br/>
 <b>Requirements</b>
 The scripts were tested with jq v1.2 and curl v7.22.0.
