@@ -32,7 +32,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_users_key_value_query</b> - returns users what match to the specific key value query.  Takes field as arg 1, value as arg 2
 <br/>
-<br/>
+<br/>u
 <b>RECONCILIATION</b>
 <br/>
 <b>getreconjobs</b> - returns json containing all completed reconcilation jobs; No arguments
@@ -78,6 +78,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>getworkflowtasks</b> - lists all current workflow tasks.  No arguments
 <br/>
 <b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
+<br/>
+<b>get_process_definitions</b> - returns all process / workflow definitions
 <br/>
 <br/>
 <b>AUDIT</b>
