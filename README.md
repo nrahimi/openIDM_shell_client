@@ -75,13 +75,13 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>WORKFLOW</b>
 <br/>
-<b>getworkflowtasks</b> - lists all current workflow tasks.  No arguments
+<b>get_task_instances</b> - lists all current workflow task instances.  No arguments
 <br/>
 <b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
 <br/>
-<b>get_process_definitions</b> - returns all process / workflow definitions
+<b>get_process_definitions</b> - returns all process / workflow definitions. No arguments
 <br/>
-<b>get_process_instances</b> - returns all process / workflow instances
+<b>get_process_instances</b> - returns all process / workflow instances.  No arguments
 <br/>
 <br/>
 <b>AUDIT</b>
