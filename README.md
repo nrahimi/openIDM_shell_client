@@ -81,6 +81,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_process_definitions</b> - returns all process / workflow definitions
 <br/>
+<b>get_process_instances</b> - returns all process / workflow instances
+<br/>
 <br/>
 <b>AUDIT</b>
 <br/>
