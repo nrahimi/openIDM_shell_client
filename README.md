@@ -32,7 +32,7 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_users_key_value_query</b> - returns users what match to the specific key value query.  Takes field as arg 1, value as arg 2
 <br/>
-<br/>u
+<br/>
 <b>RECONCILIATION</b>
 <br/>
 <b>getreconjobs</b> - returns json containing all completed reconcilation jobs; No arguments
