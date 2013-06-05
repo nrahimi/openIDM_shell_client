@@ -20,64 +20,56 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>MANAGED USERS</b>
 <br/>
-<b>getuser</b> - returns a single managed user json object; Takes id as argument 1
+<b>get_user</b> - returns a single managed user json object; Takes id as argument 1 (if searching on userName user get_users_key_value_query)
 <br/>
-<b>getusers</b> - returns json containing all managed user ids; No arguments
+<b>get_users</b> - returns json containing all managed user ids; No arguments
 <br/>
-<b>createuser</b> - creates a single user.  Takes id as argument 1; json payload as argument 2
+<b>creat_euser</b> - creates a single user.  Takes id as argument 1; json payload as argument 2
 <br/>
-<b>deleteuser</b> - deletes a single user.  Takes id as argument 1
+<b>delete_user</b> - deletes a single user.  Takes id as argument 1
 <br/>
-<b>updateuser</b> - updates a user with array of new key values.  Takes id as argument 1.  Takes json payload as argument 2
+<b>update_user</b> - updates a user with array of new key values.  Takes id as argument 1.  Takes json payload as argument 2
 <br/>
-<b>get_users_key_value_query</b> - returns users what match to the specific key value query.  Takes field as arg 1, value as arg 2
+<b>get_users_key_value_query</b> - returns users that match to the specific key value query.  Takes field as arg 1, value as arg 2. Eg userName jdoe
 <br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
-<b>getreconjobs</b> - returns json containing all completed reconcilation jobs; No arguments
+<b>get_recon_jobs</b> - returns json containing all completed reconcilation jobs; No arguments
 <br/>
-<b>runrecon</b> - runs a specific reconciliation job.  Takes sync name as argument 1
+<b>run_recon</b> - runs a specific reconciliation job.  Takes sync name as argument 1
 <br/>
-<b>cancelrecon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
-<br/>
-<b>createsync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1
+<b>cancel_recon</b> - cancels an existing reconciliation job.  Takes recon id as argument 1
 <br/>
 <br/>
 <b>GENERAL</b>
 <br/>
-<b>getconfig</b> - returns json of global configuration.  No arguments
+<b>get_config</b> - returns json of global configuration.  No arguments
 <br/>
-<b>getstatus</b> - returns status of OpenIDM instance. No arguments
+<b>get_status</b> - returns status of OpenIDM instance. No arguments
 <br/>
-<b>getpolicies</b> - returns all policy details.  No arguments
+<b>get_policies</b> - returns all policy details.  No arguments
 <br/>
-<b>getsync</b> - returns sync.json config object.  No arguments
+<b>get_config_sync</b> - returns sync.json config object.  No arguments
+<br/>
+<b>get_config_connector</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
 <br/>
 <b>pingidm</b> - basic system alive check.  No arguments
 <br/>
-<br/>
-<b>CONNECTORS</b>
-<br/>
-<b>getconnectorconfig</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
-<br/>
-<br/>
-<b>TASKS</B>
-<br/>
-<b>triggertask</b> - triggers an existing task object.  Takes task name as argument 1
-<br/>
-<b>canceltask</b> - cancels an existing running task.  Takes task id as argument 1
-<br/>
-<b>gettasks</b> - lists all existing tasks.  No arguments
-<br/>
-<b>gettask</b> - returns specific task instance.  Takes task id as argument 1
+<b>create_config_sync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1
 <br/>
 <br/>
 <b>WORKFLOW</b>
 <br/>
+<b>trigger_task</b> - triggers an existing task object.  Takes task name as argument 1
+<br/>
 <b>get_task_instances</b> - lists all current workflow task instances.  No arguments
 <br/>
-<b>completeworkflowtask</b> - completes a given task id.  Takes workflow task id as argument 1
+<b>get_task_instance</b> - returns specific task instance.  Takes task id as argument 1
+<br/>
+<b>cancel_task</b> - cancels an existing running task.  Takes task id as argument 1
+<br/>
+<b>complete_task</b> - completes a given task id.  Takes workflow task id as argument 1
 <br/>
 <b>get_process_definitions</b> - returns all process / workflow definitions. No arguments
 <br/>
