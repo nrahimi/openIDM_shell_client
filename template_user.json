@@ -1,0 +1,23 @@
+{
+
+  "employeeNumber": "0987654321",
+  "userName" : "created_via_REST",  
+  "stateProvince": "Manchester",
+  "roles": "openidm-authorized",
+  "accountStatus": "active",
+  "country": "UK",
+  "givenName": "Created",
+  "address2": "",
+  "lastPasswordAttempt": "",
+  "address1": "",
+  "familyName": "Via_REST",
+  "passwordAttempts": "0",
+  "manager": "",
+  "city": "Manchester",
+  "_rev": "",
+  "lastPasswordSet": "",
+  "postalCode": "",
+  "_id": "",
+  "phoneNumber": "123456789",
+  "email": "created.via.rest@example.com"
+}
