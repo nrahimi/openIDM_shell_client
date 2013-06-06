@@ -13,7 +13,7 @@ fi
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires task id"
-	echo "Eg. ./completeworkflowtask.sh 13"
+	echo "Eg. $0 13"
 	exit
 fi
 
