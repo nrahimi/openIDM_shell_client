@@ -97,6 +97,13 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>get_access_log_entry</b> - returns single access log entry.  Takes access id as argument 1
 <br/>
 <br/>
+<b>TEMPLATES</b>
+<br/>
+Template JSON files for use with creating objects
+<br/>
+template_user.json - can be used with ./create_user to create add a managedUser object
+<br/>
+<br/>
 <b>Requirements</b>
 The scripts were tested with jq v1.2 and curl v7.22.0.
 <br/>
