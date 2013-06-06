@@ -13,7 +13,7 @@ fi
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires recon id as arg 1"
-	echo "Eg. ./get_recon_audit_log_ABSENT.sh 8dcf3a74-f82c-464f-9577-e605020e91df"
+	echo "Eg. $0 8dcf3a74-f82c-464f-9577-e605020e91df"
 	exit
 fi
 
