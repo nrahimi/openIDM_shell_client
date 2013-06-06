@@ -20,7 +20,7 @@ fi
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires argument mapping name from appropriate conf/sync.json"
-	echo "Eg. ./runrecon.sh systemHrdb_managedUser"
+	echo "Eg. $0 systemHrdb_managedUser"
 	exit
 fi
 
