@@ -16,7 +16,7 @@ OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires reconciliation job id as arg 1"
-	echo "Eg. ./cancelrecon.sh 0890ad62-4738-4a3f-8b8e-f3c83bbf212e"
+	echo "Eg. $0 0890ad62-4738-4a3f-8b8e-f3c83bbf212e"
 	exit
 fi
 
