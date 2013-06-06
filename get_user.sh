@@ -15,8 +15,8 @@ OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
 #check that arg is passed
 if [ "$1" = "" ]; then
-	echo "Argument missing.  Requires argument id"
-	echo "Eg. ./getuser.sh jdoe"
+	echo "Argument missing.  Requires object id as arg 1.  If _id isn't known but another field value is see get_users_key_value_query"
+	echo "Eg. $0 jdoe"
 	exit
 fi
 
