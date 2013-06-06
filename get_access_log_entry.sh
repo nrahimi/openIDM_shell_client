@@ -16,7 +16,7 @@ OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires access id as arg 1"
-	echo "Eg. ./get_access_log_entry.sh 8dcf3a74-f82c-464f-9577-e605020e91df"
+	echo "Eg. $0 8dcf3a74-f82c-464f-9577-e605020e91df"
 	exit
 fi
 
