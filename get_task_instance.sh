@@ -13,7 +13,7 @@ fi
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires task id as arg 1"
-	echo "Eg. ./gettask.sh 4512"
+	echo "Eg. $0 4512"
 	exit
 fi
 
