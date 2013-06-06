@@ -16,7 +16,7 @@ OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires json payload as arg 1 prefixed with @"
-	echo "Eg. ./createsync.sh @sync.json"
+	echo "Eg. $0 @sync.json"
 	exit
 fi
 
