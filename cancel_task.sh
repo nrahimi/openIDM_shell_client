@@ -16,7 +16,7 @@ OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 #check that arg is passed
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires task id"
-	echo "Eg. ./canceltask.sh edfaf59c-aad1-442a-adf6-3620b24f8385"
+	echo "Eg. $0 edfaf59c-aad1-442a-adf6-3620b24f8385"
 	exit
 fi
 
