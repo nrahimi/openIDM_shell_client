@@ -73,6 +73,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>get_process_definitions</b> - returns all process / workflow definitions. No arguments
 <br/>
+<b>get_process_definition</b> - returns single process / workflow definition. Process id as argument 1
+<br>
 <b>get_process_instances</b> - returns all process / workflow instances.  No arguments
 <br/>
 <br/>
