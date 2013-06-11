@@ -19,7 +19,7 @@ fi
 
 #check that arg is passed
 if [ "$1" = "" ]; then
-	echo "Argument missing.  Requires argument user id as arg 1"
+	echo "Argument missing.  Requires user object id as arg 1"
 	echo "Eg. ./updateuser.sh jdoe @data.json"
 	exit
 fi
@@ -27,7 +27,7 @@ fi
 #check that arg is passed
 if [ "$2" = "" ]; then
 	echo "Argument missing.  Requires json payload as arg 2"
-	echo "Eg. ./updateuser.sh jdoe @data.json"
+	echo "Eg. $0 jdoe @data.json"
 	echo "data.json contains map/array of keys to change. Eg:"
 	echo "[{"replace":"/city","value": "Manchester"}]"
 	exit
@@ -40,7 +40,8 @@ OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
 OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
 #form url
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=patch&_queryId=for-userName&uid=$1"
+#URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=patch&_queryId=for-userName&uid=$1"
+URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1?_action=patch"
 
 #data payload in json file
 DATA=$2
@@ -50,12 +51,12 @@ echo ""
 echo "Original User Object:"
 echo "---------------------"
 echo ""
-./getuser.sh $1
+./get_user.sh $1
 echo ""
 curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $DATA $URL | jq .
 echo ""
 echo "Updated User Object:"
 echo "---------------------"
 echo ""
-./getuser.sh $1
+./get_user.sh $1
 
