@@ -33,5 +33,5 @@ USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
 PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
 #calls curl and parses response into jq
-curl --request PUT --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $2 $1 | jq .
+curl -k --request PUT --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $2 $1 | jq .
 
