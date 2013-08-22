@@ -28,5 +28,6 @@ USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
 PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
 #calls curl and parses response into jq
-curl --request DELETE --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "If-Match: \"0\"" $1 | jq .
+#curl --request DELETE --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "If-Match: \"0\"" $1 | jq .
+curl --request DELETE --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "If-Match: *" $1 | jq .
 
