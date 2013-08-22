@@ -3,6 +3,9 @@
 #https://github.com/smof/openIDM_shell_client
 #Runs a reconcilation job for specific mapping definition
 
+#pulls in settings file
+source settings.sh
+
 #check that jq util is present
 JQ_LOC="$(which jq)"
 if [ "$JQ_LOC" = "" ]; then
@@ -23,12 +26,6 @@ if [ "$1" = "" ]; then
 	echo "Eg. $0 systemHrdb_managedUser"
 	exit
 fi
-
-#suck in username and password details
-OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
-OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
-USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
-PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
 #construct URL
 URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/recon?_action=recon&mapping=$1"

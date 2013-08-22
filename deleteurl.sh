@@ -3,6 +3,9 @@
 #https://github.com/smof/openIDM_shell_client
 #Wrapper for quickly calling curl to perform a DELETE against openIDM
 
+#pulls in settings file
+source settings.sh
+
 #check that URL is passed as an argument
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires URL"
@@ -23,11 +26,6 @@ if [ "$CURL_LOC" = "" ]; then
 	exit
 fi
 
-#suck in username and password details
-USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
-PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
-
 #calls curl and parses response into jq
-#curl --request DELETE --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "If-Match: \"0\"" $1 | jq .
 curl --request DELETE --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "If-Match: *" $1 | jq .
 

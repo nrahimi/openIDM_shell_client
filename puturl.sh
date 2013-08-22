@@ -3,6 +3,9 @@
 #https://github.com/smof/openIDM_shell_client
 #Wrapper for quickly calling curl to perform a PUT against openIDM
 
+#pulls in settings file
+source settings.sh
+
 #check that URL is passed as an argument
 if [ "$1" = "" ]; then
 	echo "Argument missing.  Requires URL"
@@ -27,10 +30,6 @@ if [ "$CURL_LOC" = "" ]; then
 	echo "Curl not found.  Please install sudo apt-get install curl etc..."
 	exit
 fi
-
-#suck in username and password details
-USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
-PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
 
 #calls curl and parses response into jq
 curl -k --request PUT --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $2 $1 | jq .

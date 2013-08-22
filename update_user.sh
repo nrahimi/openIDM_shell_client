@@ -3,6 +3,9 @@
 #https://github.com/smof/openIDM_shell_client
 #Updates a single user as given by json payload
 
+#pulls in settings file
+source settings.sh
+
 #check that jq util is present
 JQ_LOC="$(which jq)"
 if [ "$JQ_LOC" = "" ]; then
@@ -33,11 +36,6 @@ if [ "$2" = "" ]; then
 	exit
 fi
 
-#suck in username and password details
-USERNAME=$(jq '.username' ./settings.json | sed 's/\"//g')
-PASSWORD=$(jq '.password' ./settings.json | sed 's/\"//g')
-OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
-OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
 #form url
 #URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=patch&_queryId=for-userName&uid=$1"

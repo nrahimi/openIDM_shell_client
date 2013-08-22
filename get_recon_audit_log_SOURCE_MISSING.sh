@@ -3,12 +3,8 @@
 #https://github.com/smof/openIDM_shell_client
 #Returns audit log for given recon id showing only SOURCE_MISSING situation
 
-#check that jq util is present
-JQ_LOC="$(which jq)"
-if [ "$JQ_LOC" = "" ]; then
-   	echo "JSON parser jq not found.  Download from http://stedolan.github.com/jq/download/"
-   	exit
-fi
+#pulls in settings file
+source settings.sh
 
 #check that arg is passed
 if [ "$1" = "" ]; then
@@ -16,9 +12,6 @@ if [ "$1" = "" ]; then
 	echo "Eg. $0 8dcf3a74-f82c-464f-9577-e605020e91df"
 	exit
 fi
-
-OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
-OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
 ./geturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/audit/recon?_queryId=audit-by-recon-id-situation&situation=SOURCE_MISSING&reconId=$1"
 
