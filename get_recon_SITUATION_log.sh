@@ -9,7 +9,7 @@ source settings.sh
 #check that situation arg is passed
 if [ "$2" = "" ]; then
 	echo ""
-	echo "Argument missing.  Requires situation as arg 1"
+	echo "Argument missing.  Requires situation as arg 2"
 	echo "Situations include: UNASSIGNED, TARGET_IGNORED, SOURCE_IGNORED, MISSING, FOUND, AMBIGUOUS, UNQUALIFIED, CONFIRMED, SOURCE_MISSING, ABSENT"
 	echo ""
 	echo "Eg. $0 SOURCE_MISSING 8dcf3a74-f82c-464f-9577-e605020e91df"
@@ -19,9 +19,9 @@ fi
 
 
 #check that arg is passed
-if [ "$2" = "" ]; then
+if [ "$1" = "" ]; then
 	echo ""
-	echo "Argument missing.  Requires recon id as arg 2"
+	echo "Argument missing.  Requires recon id as arg 1"
 	echo "Eg. $0 <SITUATION> 8dcf3a74-f82c-464f-9577-e605020e91df"
 	echo ""
 	exit
