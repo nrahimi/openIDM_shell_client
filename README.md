@@ -3,7 +3,12 @@ OpenIDM Shell Client
 
 Basic set of Bash wrapper scripts that use curl, jq and others to access the openIDM (http://forgerock.com/openidm) RESTful interface.
 <br/>
-Edit the settings.json file with server and port values for OpenIDM instance.
+Edit the settings.sh file with server and port values for OpenIDM instance.
+<br/>
+Tested against OpenIDM 2.1
+<br/>
+<br/>
+Run ./interactive.sh for interactive menu driven front end to all scripts, or each script can be run individually.
 <br/>
 <br/>
 <b>geturl</b> - perform HTTP GET request. Takes URL as argument
@@ -44,19 +49,19 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>GENERAL</b>
 <br/>
-<b>get_config</b> - returns json of global configuration.  No arguments
+<b>get_global_config</b> - returns json of global configuration.  No arguments
 <br/>
 <b>get_status</b> - returns status of OpenIDM instance. No arguments
 <br/>
 <b>get_policies</b> - returns all policy details.  No arguments
 <br/>
-<b>get_config_sync</b> - returns sync.json config object.  No arguments
+<b>get_config</b> - returns individual config object.  Takes object name as argument 1
+<br/>
+<b>set_config</b> - updates config object.  Takes JSON object as argument 1
 <br/>
 <b>get_config_connector</b> - returns configuration of specific connector instance.  Takes connector instance name as arg 1
 <br/>
-<b>pingidm</b> - basic system alive check.  No arguments
-<br/>
-<b>create_config_sync</b> - creates or replaces the sync.json mappings files.  Takes json payload file as arg 1
+<b>ping_idm</b> - basic system alive check.  No arguments
 <br/>
 <br/>
 <b>WORKFLOW</b>
