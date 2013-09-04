@@ -244,7 +244,7 @@ function manage_recon_menu() {
 
 		*)
 
-			menu
+			manage_recon_menu
 			;;
 	esac
 
@@ -316,7 +316,7 @@ function get_recon_job_log() {
 
 		*)
 
-			get_recon_job_log
+			manage_recon_menu
 			;;
 	esac
 	./get_recon_SITUATION_log.sh $recon_id $situation
