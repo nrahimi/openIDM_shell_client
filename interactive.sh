@@ -104,7 +104,7 @@ function ping_idm() {
 function manage_config_menu() {
 
 	clear
-	echo "OpenIDM Shell REST Client - Config Mode"
+	echo "OpenIDM Shell REST Client - Config Menu"
 	echo "----------------------------------------------------------------------------------"
 	echo "1:  Get Global Config"
 	echo "2:  Get Specific Config Object (workflow, sync, managed ...)"
