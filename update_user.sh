@@ -51,7 +51,7 @@ echo "---------------------"
 echo ""
 ./get_user.sh $1
 echo ""
-curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $DATA $URL | jq .
+curl --request POST --header "Content-Type: application/json" --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $DATA $URL | jq .
 echo ""
 echo "Updated User Object:"
 echo "---------------------"

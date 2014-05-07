@@ -114,6 +114,7 @@ function manage_roles_menu() {
 	echo "2:  Get Role Using ID"
 	echo "3:  Create Role"
 	echo "4:  Delete Role"
+	echo "5:  Assign Role to User"
 	echo ""
 	echo "B:  Back to main menu"
 	echo "X:  Exit"
@@ -139,6 +140,10 @@ function manage_roles_menu() {
 			delete_role
 			;;
 
+		5)
+			assign_role_to_user
+			;;
+			
 		[x] | [X])
 				clear	
 				echo "Byeeeeeeeeeeeeeeeeeee :)"
@@ -157,6 +162,31 @@ function manage_roles_menu() {
 	esac
 }
 	
+
+function assign_role_to_user() {
+	
+	clear
+	echo "Enter the _id of the user to update:"
+	read user_id
+	echo ""
+	echo "To assign a role to a user, we perform a patch again the user object, with a new roles array."
+	echo "A JSON payload contains the patch for the roles attribute, that contains the changes."
+	echo ""
+	echo "The following JSON files are in this directory:"
+	echo ""
+	ls *.json
+	echo ""
+	echo "Select a JSON file with the necessary patch:"
+	read roles_payload
+	echo ""
+	./update_user.sh $user_id @$roles_payload
+	echo ""	
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu		
+	
+}
+
+
 function delete_role() {
 	
 	clear

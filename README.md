@@ -48,6 +48,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>delete_role</b> - deletes role object.  Requires role _id as arg 1.
 <br/>
+<b>assign_role_to_user</b> - interactive menu option only. Requires patch payload and _id of user
+<br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
