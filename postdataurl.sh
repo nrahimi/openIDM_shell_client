@@ -27,5 +27,5 @@ if [ "$CURL_LOC" = "" ]; then
 fi
 
 #run parses JSON response to for pretty reading
-curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $2 $1 | jq .
+curl --request POST --header "Content-Type: application/json" --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --data $2 $1 | jq .
 
