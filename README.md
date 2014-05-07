@@ -38,6 +38,16 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <b>get_users_key_value_query</b> - returns users that match to the specific key value query.  Takes field as arg 1, value as arg 2. Eg manager jdoe
 <br/>
 <br/>
+<b>ROLES</b>
+<br/>
+<b>get_roles</b> - returns all managed role objects
+<br/>
+<b>create_role</b> - creates a role with a server-side generated ID (_action=create).  Takes JSON role payload as arg 1.
+<br/>
+<b>get_role</b> - returns a single role object.  Requires role _id as arg 1.
+<br/>
+<b>delete_role</b> - deletes role object.  Requires role _id as arg 1.
+<br/>
 <b>RECONCILIATION</b>
 <br/>
 <b>get_recon_jobs</b> - returns json containing all completed reconcilation jobs; No arguments

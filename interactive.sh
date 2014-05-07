@@ -12,11 +12,12 @@ function menu() {
 	echo "OpenIDM Shell REST Client - Interactive Mode"
 	echo "----------------------------------------------------------------------------------"
 	echo "1:  Manage Users"
-	echo "2:  Manage Recon"
-	echo "3:  Manage Processes - To Be Implemented"
-	echo "4:  Manage Tasks - To Be Implemented"
-	echo "5:  Manage Configuration"
-	echo "6:  System Logging"
+	echo "2:  Manage Roles"
+	echo "3:  Manage Recon"
+	echo "4:  Manage Processes - To Be Implemented"
+	echo "5:  Manage Tasks - To Be Implemented"
+	echo "6:  Manage Configuration"
+	echo "7:  System Logging"
 	echo ""
 	echo "P:  Ping OpenIDM"
 	echo "C:  Configure Shell Client Settings"
@@ -32,24 +33,28 @@ function menu() {
 			;;	
 
 		2)
+			manage_roles_menu
+			;;
+			
+		3)
 			manage_recon_menu
 			;;
 
-		3)
+		4)
 			menu		 	
 			#manage_processes_menu
 			;;
 
-		4)
+		5)
 			menu			
 			#manage_tasks_menu
 			;;
 
-		5)
+		6)
 			manage_config_menu
 			;;
 
-		6)
+		7)
 			logging_menu
 			;;
 
@@ -98,6 +103,112 @@ function ping_idm() {
 
 
 #main menu interface ================================================================================================================================================================================
+
+#roles menu
+function manage_roles_menu() {
+	
+	clear
+	echo "OpenIDM Shell REST Client - Manage Roles"
+	echo "----------------------------------------------------------------------------------"
+	echo "1:  Get All Roles"
+	echo "2:  Get Role Using ID"
+	echo "3:  Create Role"
+	echo "4:  Delete Role"
+	echo ""
+	echo "B:  Back to main menu"
+	echo "X:  Exit"
+	echo "----------------------------------------------------------------------------------"
+	echo "Select an option:"
+	read option
+
+	case $option in
+
+		1)
+			get_roles
+			;;	
+
+		2)
+			get_role
+			;;
+
+		3)
+			create_role
+			;;
+
+		4)
+			delete_role
+			;;
+
+		[x] | [X])
+				clear	
+				echo "Byeeeeeeeeeeeeeeeeeee :)"
+				echo ""			
+				exit
+				;;
+
+		[b] | [B])
+				menu
+				;;
+
+		*)
+
+			manage_roles_menu
+			;;
+	esac
+}
+	
+function delete_role() {
+	
+	clear
+	echo "Enter the _id of the role to delete:"
+	read role_id
+	echo ""
+	./delete_role.sh $role_id
+	echo ""
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu	
+	
+}
+
+function get_role() {
+	
+	clear
+	echo "Enter _id of the role to retrieve:"
+	read role_id
+	echo ""
+	./get_role.sh $role_id	
+	echo ""
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu
+}
+
+
+function get_roles() {
+	
+	clear
+	./get_roles.sh	
+	echo ""
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu
+
+}
+
+function create_role() {
+	
+	clear
+	echo "The following JSON files exist in this directory:"
+	echo ""	
+	ls *.json
+	echo ""
+	echo "Enter the name of the JSON file that contains the new role:"
+	read role_payload
+	./create_role.sh "@$role_payload"
+	echo ""
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu
+
+}
+
 
 
 #config_menu ========================================================================================================================================================================================
@@ -573,7 +684,6 @@ function create_user() {
 	echo ""
 	read -p "Press [Enter] to return to menu"
 	manage_user_menu
-
 
 }
 
