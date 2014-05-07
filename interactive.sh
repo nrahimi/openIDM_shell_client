@@ -115,6 +115,7 @@ function manage_roles_menu() {
 	echo "3:  Create Role"
 	echo "4:  Delete Role"
 	echo "5:  Update User to Role Assignments"
+	echo "6:  Get Role Membership"
 	echo ""
 	echo "B:  Back to main menu"
 	echo "X:  Exit"
@@ -143,6 +144,10 @@ function manage_roles_menu() {
 		5)
 			update_user_to_role_assignments
 			;;
+
+		6)
+			get_role_membership
+			;;
 			
 		[x] | [X])
 				clear	
@@ -162,6 +167,21 @@ function manage_roles_menu() {
 	esac
 }
 	
+
+
+function get_role_membership() {
+	
+	clear
+	echo "Enter the _id of the role to list membership for:"
+	read role_id
+	echo ""
+	./get_role_membership.sh $role_id
+	echo ""
+	read -p "Press [Enter] to return to menu"
+	manage_roles_menu
+}
+
+
 
 function update_user_to_role_assignments() {
 	

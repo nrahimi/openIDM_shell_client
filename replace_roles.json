@@ -1,0 +1,10 @@
+[
+	{
+		"operation": "replace",
+		"field": "/roles",
+		"value": [
+			"openidm-authorized",
+			"managed/role/11582c4c-b846-41c3-9f2c-3f89bbf9a04e"
+		]
+	}
+]

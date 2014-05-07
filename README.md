@@ -50,6 +50,8 @@ Individual wrappers for specific functions that use the above generic wrappers:
 <br/>
 <b>update_user_role_assignments</b> - interactive menu option only. Requires patch payload and _id of user
 <br/>
+<b>get_role_membership</b> - lists directly assigned members of a role.  Takes _id of role as arg 1
+<br/>
 <br/>
 <b>RECONCILIATION</b>
 <br/>
