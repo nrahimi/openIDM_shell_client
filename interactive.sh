@@ -114,7 +114,7 @@ function manage_roles_menu() {
 	echo "2:  Get Role Using ID"
 	echo "3:  Create Role"
 	echo "4:  Delete Role"
-	echo "5:  Assign Role to User"
+	echo "5:  Update User to Role Assignments"
 	echo ""
 	echo "B:  Back to main menu"
 	echo "X:  Exit"
@@ -141,7 +141,7 @@ function manage_roles_menu() {
 			;;
 
 		5)
-			assign_role_to_user
+			update_user_to_role_assignments
 			;;
 			
 		[x] | [X])
@@ -163,7 +163,7 @@ function manage_roles_menu() {
 }
 	
 
-function assign_role_to_user() {
+function update_user_to_role_assignments() {
 	
 	clear
 	echo "Enter the _id of the user to update:"
