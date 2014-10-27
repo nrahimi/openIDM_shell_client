@@ -31,5 +31,6 @@ fi
 URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/recon?_action=recon&mapping=$1"
 
 #run parses JSON response to for pretty reading
-curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" $URL | jq .
+curl --request POST --header "X-OpenIDM-Username: $USERNAME" --header "X-OpenIDM-Password: $PASSWORD" --header "Content-Type: application/json" $URL | jq .
+
 
