@@ -13,6 +13,6 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_queryId=get-users-of-direct-role&role=managed/role/$1"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_queryId=get-users-of-direct-role&role=managed/role/$1"
 
 ./geturl.sh $URL 

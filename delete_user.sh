@@ -13,6 +13,6 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1"
 
 ./deleteurl.sh $URL 

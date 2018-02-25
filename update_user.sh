@@ -38,8 +38,8 @@ fi
 
 
 #form url
-#URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=patch&_queryId=for-userName&uid=$1"
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1?_action=patch"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=patch&_queryId=for-userName&uid=$1"
+#URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user/$1?_action=patch"
 
 #data payload in json file
 DATA=$2

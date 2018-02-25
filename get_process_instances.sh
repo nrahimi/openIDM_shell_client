@@ -13,5 +13,5 @@ fi
 OPENIDM_SERVER=$(jq '.server' settings.json | sed 's/\"//g')
 OPENIDM_SERVER_PORT=$(jq '.port' settings.json)
 
-./geturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/workflow/processinstance?_queryId=query-all-ids"
+./geturl.sh "https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/workflow/processinstance?_queryId=query-all-ids"
 

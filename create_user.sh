@@ -13,7 +13,7 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=create"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/managed/user?_action=create"
 DATA=$1
 
 ./postdataurl.sh $URL $DATA

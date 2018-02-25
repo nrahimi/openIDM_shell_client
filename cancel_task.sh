@@ -13,4 +13,4 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-./posturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/taskscanner/$1?_action=cancel"
+./posturl.sh "https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/taskscanner/$1?_action=cancel"

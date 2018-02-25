@@ -14,6 +14,6 @@ if [ "$1" = "" ]; then
 fi
 
 
-./geturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/audit/activity/$1"
+./geturl.sh "https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/audit/activity/$1"
 
 

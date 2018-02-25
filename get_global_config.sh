@@ -6,7 +6,7 @@
 #pulls in settings file
 source settings.sh
 
-./geturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config"
+./geturl.sh "https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config"
 
 
 

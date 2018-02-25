@@ -16,7 +16,7 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-./geturl.sh "http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/$1"
+./geturl.sh "https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/$1"
 
 
 

@@ -20,7 +20,7 @@ fi
 BASENAME=$(basename $1 .json)
 
 #url needs just basename
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/$BASENAME"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/$BASENAME"
 
 #data needs appending with @ so that curl can pick it up
 DATA="@$1"

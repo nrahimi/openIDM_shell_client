@@ -13,7 +13,7 @@ if [ "$1" = "" ]; then
 	exit
 fi
 
-URL="http://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/sync"
+URL="https://$OPENIDM_SERVER:$OPENIDM_SERVER_PORT/openidm/config/sync"
 DATA=$1
 
 ./puturl.sh $URL $DATA
